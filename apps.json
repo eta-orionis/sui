@@ -1,8 +1,38 @@
 {
     "apps" : [
-        {"name":"Minio","url":"minio.example.com","icon":"server"},
-        {"name":"Nextcloud","url":"cloud.example.com","icon":"weather-cloudy"},
-        {"name":"Pi-hole","url":"pihole.example.com","icon":"do-not-disturb"},
-        {"name":"Portainer","url":"port1.example.com","icon":"docker"}
+        {
+            "category": "Infrastructure",
+            "apps": [
+                {"name":"Portainer","url":"port1.example.com","icon":"docker"},
+                {"name":"Proxmox","url":"pve.example.com","icon":"server-network"},
+                {"name":"Traefik","url":"traefik.example.com","icon":"router-network"}
+            ]
+        },
+        {
+            "category": "Storage",
+            "apps": [
+                {"name":"Minio","url":"minio.example.com","icon":"server"},
+                {"name":"Nextcloud","url":"cloud.example.com","icon":"weather-cloudy"}
+            ]
+        },
+        {
+            "category": "Network",
+            "apps": [
+                {"name":"Pi-hole","url":"pihole.example.com","icon":"do-not-disturb"}
+            ]
+        },
+        {
+            "category": "Monitoring",
+            "apps": [
+                {"name":"Grafana","url":"grafana.example.com","icon":"chart-line"},
+                {"name":"Uptime Kuma","url":"status.example.com","icon":"heart-pulse"}
+            ]
+        },
+        {
+            "category": "Home",
+            "apps": [
+                {"name":"Home Assistant","url":"ha.example.com","icon":"home-assistant","target":"_blank"}
+            ]
+        }
     ]
 }

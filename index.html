@@ -81,14 +81,19 @@
             <h3>Applications</h3>
             <div id="apps_loop">
                 {{#apps}}
-                    <div class="apps_item">
-                        <div class="apps_icon">
-                            <span class="iconify icon" data-icon="mdi-{{icon}}"></span>
-                        </div>
-                        <div class="apps_text">
-                            <a href="http://{{url}}" {{#if target}}target="{{target}}"{{/if}} >{{name}}</a>
-                            <span id="app-address">{{url}}</span>
-                        </div>
+                    <div class="apps_category{{#if flat}} apps_category--flat{{/if}}">
+                        {{#if category}}<h4>{{category}}</h4>{{/if}}
+                        {{#apps}}
+                            <div class="apps_item">
+                                <div class="apps_icon">
+                                    <span class="iconify icon" data-icon="mdi-{{icon}}"></span>
+                                </div>
+                                <div class="apps_text">
+                                    <a href="http://{{url}}" {{#if target}}target="{{target}}"{{/if}} >{{name}}</a>
+                                    <span class="app-address">{{url}}</span>
+                                </div>
+                            </div>
+                        {{/apps}}
                     </div>
                 {{/apps}}
             </div>

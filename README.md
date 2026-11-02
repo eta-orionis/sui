@@ -29,20 +29,36 @@ To run at a different port open edit docker-compose.yml:
  - Click the options button on the left bottom
 
 #### Apps
-Add your apps by editing apps.json:
+Add your apps by editing apps.json. Like bookmarks, apps are grouped in categories:
 
-    {
-	    "apps" : [
-		    {"name":"Name of app 1","url":"sub1.example.com","icon":"icon-name"},
-		    {"name":"Name of app 2","url":"sub2.example.com","icon":"icon-name","target":"optionals"}
-	    ]
-    }
+```
+{
+   "apps":[
+      {
+         "category":"Category1",
+         "apps":[
+            {"name":"Name of app 1","url":"sub1.example.com","icon":"icon-name"},
+            {"name":"Name of app 2","url":"sub2.example.com","icon":"icon-name","target":"optionals"}
+         ]
+      },
+      {
+         "category":"Category2",
+         "apps":[
+            {"name":"Name of app 3","url":"sub3.example.com","icon":"icon-name"}
+         ]
+      }
+   ]
+}
+```
+
+Categories are laid out in four columns; when there are more than four, a column holds several categories stacked below each other.
 
 Please note:
 
  - No `http://` in the URL
- - No `,` at the end of the last app's line
+ - No `,` at the end of the last app in a category and at the end of the last category
  - Find the names  of icons to use at [Material Design Icons](https://materialdesignicons.com/)
+ - The old flat format (`{"apps": [{"name":..., ...}, ...]}` without categories) still works and is shown as a single grid without a heading
 
 #### Bookmarks
 Add your bookmarks by editing links.json:
