@@ -214,7 +214,13 @@ table a{
 }
 
 .apps_category h4{
-	margin-bottom: 1.5em;
+	border-bottom: 3px solid currentColor;
+	color: var(--color-text-acc);
+	display: inline-block;
+	font-weight: 700;
+	height: auto;
+	margin-bottom: 1em;
+	padding-bottom: 0.3em;
 }
 
 .apps_category--flat{
@@ -281,8 +287,7 @@ table a{
 	webkit-font-smoothing: antialiased;
 }
 
-#links_item h4,
-.apps_category h4{
+#links_item h4{
 	color: var(--color-text-acc);
 }
 
